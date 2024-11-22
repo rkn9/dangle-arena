@@ -6,9 +6,9 @@ const Webpages = () => {
     <div>
       <Heading2 />
 
-      <div>
-        <h3>Dangal Arena</h3>
-        <p>
+      <div className="bg-gray-200 p-7">
+        <h3 className="font-bold text-lg">Dangal Arena</h3>
+        <p className="mt-2 leading-6">
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry's standard dummy text ever
           since the 1500s, when an unknown printer took a galley of type and
@@ -19,7 +19,7 @@ const Webpages = () => {
           more recently with desktop publishing software like Aldus PageMaker
           including versions of Lorem Ipsum
         </p>
-        <p>
+        <p className="mt-4 leading-6">
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry's standard dummy text ever
           since the 1500s, when an unknown printer took a galley of type and
@@ -30,7 +30,7 @@ const Webpages = () => {
           more recently with desktop publishing software like Aldus PageMaker
           including versions of Lorem Ipsum
         </p>
-        <p>
+        <p className="mt-4 leading-6">
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry's standard dummy text ever
           since the 1500s, when an unknown printer took a galley of type and
