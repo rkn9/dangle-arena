@@ -42,17 +42,21 @@ function Header() {
           );
         })}
       </nav>
-      <div className="*:bg-orange flex gap-3 items-center text-white *:px-3 *:py-1  *:border *:rounded-lg *:h-fit">
-        <Link href="/" className="flex items-center gap-2">
-          <BiLogoPlayStore color="white" />
-          App Download
-        </Link>
-        <Link href="/" onClick={() => setLogin(!login)}>
-          Login
-        </Link>
-        {login ? <h2 className="cursor-pointer">logo</h2> : ""}
+      <div className="flex items-center gap-2 relative">
+        <div className="*:bg-orange flex gap-3 items-center text-white *:px-3 *:py-1  *:border *:rounded-lg *:h-fit">
+          <Link href="/" className="flex items-center gap-2">
+            <BiLogoPlayStore color="white" />
+            App Download
+          </Link>
+          <Link href="/" onClick={() => setLogin(!login)}>
+            Login
+          </Link>
+        </div>
+        <h2 className="cursor-pointer" onClick={() => setLogin(!login)}>
+          logo
+        </h2>
+        {login ? <HeaderSecond /> : ""}
       </div>
-      <HeaderSecond />
     </header>
   );
 }
