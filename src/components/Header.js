@@ -2,8 +2,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import React from "react";
+import React, { useState } from "react";
 import { BiLogoPlayStore } from "react-icons/bi";
+import HeaderSecond from "./models/HeaderSecond";
 
 const navLink = [
   { name: "Home", href: "/" },
@@ -15,6 +16,8 @@ const navLink = [
 function Header() {
   const pathName = usePathname();
   console.log(pathName);
+
+  const [login, setLogin] = useState(false);
 
   return (
     <header
@@ -39,13 +42,17 @@ function Header() {
           );
         })}
       </nav>
-      {/* <div className="*:bg-orange flex gap-3 items-center text-white *:px-3 *:py-1  *:border *:rounded-lg *:h-fit">
+      <div className="*:bg-orange flex gap-3 items-center text-white *:px-3 *:py-1  *:border *:rounded-lg *:h-fit">
         <Link href="/" className="flex items-center gap-2">
           <BiLogoPlayStore color="white" />
           App Download
         </Link>
-        <Link href="/">Login</Link>
-      </div> */}
+        <Link href="/" onClick={() => setLogin(!login)}>
+          Login
+        </Link>
+        {login ? <h2 className="cursor-pointer">logo</h2> : ""}
+      </div>
+      <HeaderSecond />
     </header>
   );
 }

@@ -1,6 +1,6 @@
 import LiveNewsCard from "@/components/Cards/LiveNewsCard";
 import Newscard from "@/components/Cards/Newscard";
-import Heading from "@/components/Heading";
+// import Heading from "@/components/Heading";
 import React from "react";
 
 const page = () => {
@@ -18,13 +18,13 @@ const page = () => {
         <LiveNewsCard />
       </div>
 
-      <Heading />
+      {/* <Heading /> */}
       <div className="flex p-5 gap-5 news-card">
         <Newscard />
         <Newscard />
         <Newscard />
       </div>
-      <Heading />
+      {/* <Heading /> */}
       <div className="flex p-5 gap-5 news-card">
         <Newscard />
         <Newscard />

@@ -1,5 +1,4 @@
 import React from "react";
-// import Heading from "../Heading";
 import { FaCalendarAlt } from "react-icons/fa";
 import { FaRegClock } from "react-icons/fa";
 import Image from "next/image";
