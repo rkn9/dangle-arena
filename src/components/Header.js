@@ -19,7 +19,7 @@ function Header() {
   return (
     <header
       className="flex items-center justify-between
-     bg-header text-white h-[60px] px-[50px] *:font-medium border-b-[4px] border-orange"
+     bg-header text-white h-[60px] px-[32px] *:font-medium border-b-[4px] border-orange"
     >
       <Image src="/img/logo.png" width={40} height={40} alt="logo" />
       <nav className="flex gap-3">
@@ -39,13 +39,13 @@ function Header() {
           );
         })}
       </nav>
-      <div className="*:bg-orange flex gap-3 items-center text-white *:px-3 *:py-1  *:border *:rounded-lg *:h-fit">
+      {/* <div className="*:bg-orange flex gap-3 items-center text-white *:px-3 *:py-1  *:border *:rounded-lg *:h-fit">
         <Link href="/" className="flex items-center gap-2">
           <BiLogoPlayStore color="white" />
           App Download
         </Link>
         <Link href="/">Login</Link>
-      </div>
+      </div> */}
     </header>
   );
 }

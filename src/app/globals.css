@@ -7,3 +7,23 @@
 * {
   font-family: "Roboto", sans-serif;
 }
+
+@media screen and (max-width: 840px) {
+  .news-card {
+    display: block;
+  }
+  .newscard-image {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 426px) {
+  .live-news-main {
+    width: 250px;
+  }
+  .live-news-main .live-cards-h3 h3 {
+    font-size: 12px;
+  }
+  .live-news-main p {
+    font-size: 14px;
+  }
+}
