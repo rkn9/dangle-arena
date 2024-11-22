@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import React, { useState } from "react";
 import { BiLogoPlayStore } from "react-icons/bi";
 import HeaderSecond from "./models/HeaderSecond";
-
+import { IoIosNotifications } from "react-icons/io";
 const navLink = [
   { name: "Home", href: "/" },
   { name: "Video", href: "/video" },
@@ -15,8 +15,7 @@ const navLink = [
 
 function Header() {
   const pathName = usePathname();
-  console.log(pathName);
-
+  const [person, setPerson] = useState(false);
   const [login, setLogin] = useState(false);
 
   return (
@@ -52,10 +51,21 @@ function Header() {
             Login
           </Link>
         </div>
-        <h2 className="cursor-pointer" onClick={() => setLogin(!login)}>
-          logo
-        </h2>
-        {login ? <HeaderSecond /> : ""}
+        {login ? (
+          <div className="flex gap-1 items-center">
+            <IoIosNotifications size={24} />
+            <img
+              src="https://s3-alpha-sig.figma.com/img/00e7/ca72/8d0bf49bc142aa7c117f3897c78642b2?Expires=1733097600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Jk1OyS36LC6-2beRTBcnOcOmb8NKHawp~8zGoLmzL~M8~CHMIaTMPBxOpw7tX-fLyOaGS1Qmjool8JByVgKgXB7pr8RxHPKKmDsMX4ex8i9U6kY5IwjFkxhXwuNBoij-Hny-8rCLJIJ~UzMO9PHMdXqq-EFHFZXTXagXIIGNYn96fEy593SRM8mEMSaIenk96~ucMSWXVUq3epWxFuBWoT1poshs9vEB~WoLFtXPBlMU8OgqfVNgOE1WkPXjzxJKeMF4qXecSFNT5gpqyiEILX3rl0Xv3RbrdU7YANV~iwN2QUeSd~UWuX4lJlcmt0mitHduWz6UIUh2u0JcRguXhQ__"
+              alt=""
+              className="w-[30px] cursor-pointer"
+              onClick={() => setPerson(!person)}
+            />
+          </div>
+        ) : (
+          ""
+        )}
+
+        {person ? <HeaderSecond /> : ""}
       </div>
     </header>
   );
