@@ -6,7 +6,7 @@ import React from "react";
 const page = () => {
   return (
     <div className="p-4">
-      <Heading />
+      {/* <Heading /> */}
       <div className="flex p-5 gap-5 whitespace-nowrap overflow-x-auto  ">
         <LiveNewsCard />
         <LiveNewsCard />
