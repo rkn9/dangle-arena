@@ -1,13 +1,14 @@
 import LiveNewsCard from "@/components/Cards/LiveNewsCard";
 import Newscard from "@/components/Cards/Newscard";
+import NewsSection from "@/components/Section/NewsSection";
 // import Heading from "@/components/Heading";
 import React from "react";
 
 const page = () => {
   return (
-    <div className="p-4">
+    <div className="p-7">
       {/* <Heading /> */}
-      <div className="flex p-5 gap-5 whitespace-nowrap overflow-x-auto  ">
+      <div className="flex p-5 gap-5 whitespace-nowrap overflow-x-auto scrollbar-none  ">
         <LiveNewsCard />
         <LiveNewsCard />
         <LiveNewsCard />
@@ -18,18 +19,9 @@ const page = () => {
         <LiveNewsCard />
       </div>
 
-      {/* <Heading /> */}
-      <div className="flex p-5 gap-5 news-card">
-        <Newscard />
-        <Newscard />
-        <Newscard />
-      </div>
-      {/* <Heading /> */}
-      <div className="flex p-5 gap-5 news-card">
-        <Newscard />
-        <Newscard />
-        <Newscard />
-      </div>
+      <NewsSection />
+      <NewsSection />
+
     </div>
   );
 };

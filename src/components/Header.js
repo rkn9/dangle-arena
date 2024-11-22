@@ -6,6 +6,7 @@ import React, { useState } from "react";
 import { BiLogoPlayStore } from "react-icons/bi";
 import HeaderSecond from "./models/HeaderSecond";
 import { IoIosNotifications } from "react-icons/io";
+
 const navLink = [
   { name: "Home", href: "/" },
   { name: "Video", href: "/video" },
@@ -27,7 +28,6 @@ function Header() {
       <nav className="flex gap-3">
         {navLink.map((item, id) => {
           const isActive = pathName == item.href;
-
           return (
             <Link
               href={`${item.href}`}

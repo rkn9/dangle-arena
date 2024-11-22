@@ -11,7 +11,6 @@ function HeaderSecond() {
   ];
 
   let path = usePathname();
-  console.log(path);
   return (
     <div className="absolute right-[0] border-orange border-2 top-[50px]">
       <ul className="*:flex *:items-center *:gap-4 * *:justify-between *:p-4 bg-header w-[300px] *:cursor-pointer *:bg ">
@@ -27,14 +26,13 @@ function HeaderSecond() {
         </Link>
         {navLink.map((item, id) => {
           const active = path == item.href;
-          console.log(active, item.href, path);
           return (
             <Link
               key={id}
               href={`${item.href}`}
               className={
                 ("border-t-2 border-t-orange",
-                active ? "bg-blue-600" : "bg-transparent")
+                  active ? "bg-blue-600" : "bg-transparent")
               }
             >
               <div className="flex ">
